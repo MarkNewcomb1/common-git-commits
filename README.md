@@ -88,3 +88,12 @@ Your interactive rebase is done - now just push this change:
 
 Remember that git rebase re-applies commits, one by one, in order. the `-i` option opens an editor with the commits that are about to be changed, with an option to edit the list. Here, we're editing the list by squashing them, and also we have an opportunity to re-word a particular commit message. 
 And of course, `HEAD` is a reference to the last commit in the currently checked out branch. `~` points to a position relative to a specific commit. In this case, 3 back from the current one. 
+
+
+> I just need to add something to my last commit, but I don't want to create another commit and have to squash it.
+
+`git commit --amend --no-edit`
+
+###Why?
+
+`--amend` replaces the tip of the current branch by creating a new commit. The original commit is used as a starting point, and `--no-edit` uses the selected commit message without launching the vim editor. 
